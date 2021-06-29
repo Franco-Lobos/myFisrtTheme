@@ -16,6 +16,10 @@
             <h1><a href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a></h1>
             <h4><?php bloginfo('description'); ?></h4>
 
+            <?php if(is_page(8)) { ?>
+                <h5>Thank you for viewing our page!</h5>
+            <?php }?>
+
             <nav class='site-nav'>
 
                 <?php 
