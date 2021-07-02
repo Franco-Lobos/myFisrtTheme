@@ -13,6 +13,13 @@
 
         <!-- site-header -->
         <header class ="site-header">
+
+            <!-- hd-search -->
+            <div class='hd-search'>
+                <?php get_search_form();?>
+            </div><!--/hd-search-->
+
+
             <h1><a href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a></h1>
             <h4><?php bloginfo('description'); ?></h4>
 
