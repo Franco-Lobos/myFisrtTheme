@@ -26,8 +26,6 @@ if (have_posts()):
         echo 'Archives:';
     }
 
-
-
     ?></h2>
 
     <?php
