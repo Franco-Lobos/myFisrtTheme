@@ -13,7 +13,7 @@ body {
 
 a:link,
 a:visited{
-    color:maroon;
+    color:rgb(85, 41, 85);
 }
 
 p {
@@ -36,18 +36,88 @@ div.container{
     padding-right: 20px;
 }
 
+/*Aside Styles*/
+article.post-aside,
+article.post-link {
+    font-size: 12px;
+    background-color: #FFF5CB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba (0, 0, 0, 0.1);
+}
+
+/*Link Post Format  Styles*/
+article.post-link{
+    padding: 0;
+    background-color: #E0ebee;
+}
+
+article.post-link a{
+    display: block;
+    padding: 20 px;
+}
+
+.mini-meta {
+    color: #fff;
+    font-size: 68%;
+    margin: 0px;
+}
+
+/*Post Format Gallery Styles*/
+
+article.post-gallery{
+    background-color:#222;
+    color: #fff;
+    padding: 20px;
+    column-count:2; 
+}
+
+article.post-gallery img {
+    width: 10vw;
+    height: auto;
+}
+
+article.post-gallery h2{
+    text-align: center;
+    color: white;
+}
+
 /* Header */
 .site-header {
     margin-top: 30px;
     border-bottom: 2px solid #999;
 }
 
-/* Footer */
-.site-footer {
-    margin-top: 30px; 
-    border-top: 2px solid #999;
+/*Main column*/
+.main-column {
+    width: 66%;
+    float: left;
 }
 
+/*Side Column*/
+.secondary-column {
+    width: 30%;
+    float: right;
+}
+
+/*Footer Widget Area*/
+.footer-widget-area{
+    width: 25%;
+    float: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+.footer-widgets{
+    margin-top: 0;
+    padding: 0px 20px 10px 40px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: rgba(77, 77, 158, 0.349);
+    margin-top: 10px; 
+    border-top: 2px solid #999;
+}
 
 /* Navigation menus */
 .site-nav ul{
@@ -75,7 +145,8 @@ div.container{
     display: block;
     padding: 10px 18px;
     border: 1px solid #999;
-    border-bottom: 10px solid salmon;
+    border-bottom: 5px solid #333a;
+    margin-bottom: 5px;
     text-decoration: none;
 }
 
@@ -85,8 +156,8 @@ div.container{
 
 .site-header nav ul li.current-menu-item a:link,
 .site-header nav ul li.current-menu-item a:visited,
-.site-header nav ul li.current-page-ancestor a:link
-.site-heaader nav ul li.current-page-ancestor a:visited{
+.site-header nav ul li.current-page-ancestor a:link,
+.site-header nav ul li.current-page-ancestor a:visited{
     background-color: #006ec3;
     color: #fff;
 }
@@ -95,7 +166,7 @@ div.container{
 .site-footer nav ul li {
     margin-left: 10px;
     padding-right: 10px;
-    border-right: 2px dotted #999;
+    border-right: 2px solid;
 }
 
 /*Page Layout */
@@ -232,4 +303,50 @@ div.hd-search #searchsubmit {
 div.hd-search #s{
     vertical-align: top;
     padding: 3px, 0;
+}
+
+
+/*Post Columns*/
+
+.home-columns {
+    padding-top: 30px;
+}
+
+.one-half{
+    width: 45%;
+    float: left;
+    margin-right: 10%;
+}
+
+.last {
+    margin-right: 0px;
+}
+
+/*Footer Callout Section*/
+.footer-callout {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 30px 0 0 0;
+    height: 180px;
+}
+
+
+.footer-callout-image {
+    float: left;
+    width: 30%;
+}
+
+
+.footer-callout-text {
+    float: right;
+    width: 67%;
+}
+
+.footer-callout-text h2 {
+    font-size: 1.8rem;
+    margin: 0 0 .35 0;
+}
+
+.footer-callout-text p{
+    font-size: .9rem;
 }

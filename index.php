@@ -1,19 +1,29 @@
-<?php 
+<?php get_header(); ?>
 
-get_header();
+            <!--site-content-->
+            <div class='site-content clearfix'>
 
-if (have_posts()):
-    while (have_posts()) : the_post();
+                <!-- main-column -->
+                <div class='main-column'>
 
-    get_template_part('content');   
+                    <?php if (have_posts()):
+                        while (have_posts()) : the_post();
 
-    endwhile;
+                        get_template_part('content', get_post_format());   
 
-    else :
-        echo '<p>No content found</p>';
-    
-endif;
+                        endwhile;
 
-get_footer();
+                    else :
+                        echo '<p>No content found</p>';
 
-?>
+                    endif;?>
+
+
+                </div> <!--/main-column-->
+
+                <?php get_sidebar();?>
+
+            </div><!--/site-content>
+
+
+<?php get_footer();?>

@@ -7,37 +7,37 @@
         <?php wp_head(); ?>
     </head>
 
-<body <?php body_class(); ?>>
+    <body <?php body_class(); ?>>
 
-    <div class='container'>
+        <div class='container'>
 
-        <!-- site-header -->
-        <header class ="site-header">
+            <!-- site-header -->
+            <header class ="site-header">
 
-            <!-- hd-search -->
-            <div class='hd-search'>
-                <?php get_search_form();?>
-            </div><!--/hd-search-->
+                <!-- hd-search -->
+                <div class='hd-search'>
+                    <?php get_search_form();?>
+                </div><!--/hd-search-->
 
 
-            <h1><a href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a></h1>
-            <h4><?php bloginfo('description'); ?></h4>
+                <h1><a href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a></h1>
+                <h4><?php bloginfo('description'); ?></h4>
 
-            <?php if(is_page(8)) { ?>
-                <h5>Thank you for viewing our page!</h5>
-            <?php }?>
+                <?php if(is_page(8)) { ?>
+                    <h5>Thank you for viewing our page!</h5>
+                <?php }?>
 
-            <nav class='site-nav'>
+                <nav class='site-nav'>
 
-                <?php 
+                    <?php 
 
-                    $args = array(
-                        'theme_location' => 'primary'
-                    );
+                        $args = array(
+                            'theme_location' => 'primary'
+                        );
 
-                ?>                
+                    ?>                
 
-                <?php wp_nav_menu( $args); ?>
-            <nav/>
+                    <?php wp_nav_menu( $args); ?>
+                <nav/>
 
-        </header><!-- /siteheader -->
+            </header><!-- /siteheader -->
