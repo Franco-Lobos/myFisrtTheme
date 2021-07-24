@@ -3,12 +3,11 @@
 function myResources(){
 
     wp_enqueue_style('style', get_stylesheet_uri());
-
 }
 
 add_action('wp_enqueue_scripts', 'myResources');
- 
 
+ 
 
 //Get top ancester
 
@@ -243,3 +242,28 @@ function lwp_footer_callout($wp_customize) {
 }
 
 add_action('customize_register', 'lwp_footer_callout');
+
+//Add carousel function
+
+
+function carousel_init() {
+    $elements = get_;
+}
+
+
+//function has_children() {
+//    global $post;
+//  $pages = get_pages('child_of=' . $post->ID);
+//    return count($pages);
+//}
+
+
+add_action('DOMContentLoaded', 'carousel_init');
+
+
+//add shortcode
+
+require_once(get_template_directory() . '/shortcodes/categorySearchChild/index.php');
+
+require_once(get_template_directory() . '/shortcodes/slider/index.php');
+

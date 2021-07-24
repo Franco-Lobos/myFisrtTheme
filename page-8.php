@@ -23,6 +23,25 @@ if (have_posts()):
         </div><!-- /column-container -->
 
 
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <div class='carousel-container'>
+            <div calss='carousel-row'>
+                <div class='col s12'>
+                
+                    <div class= 'carousel center-align'> 
+                        <div class='carousel-item'>
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
         <?php the_content(); ?>
     </article class='post'>
 

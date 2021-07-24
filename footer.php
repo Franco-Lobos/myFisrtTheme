@@ -4,7 +4,7 @@
             <div  class='footer-callout'>
             
                 <div class='footer-callout-image'>
-                    <img src='<?php echo wp_get_attachment_url(get_theme_mod('lwp-footer-callout-image'));?>'>
+                    <img src='<?php echo wp_get_attachment_url(get_theme_mod('lwp-footer-callout-image'));?>'></img>
                 </div>
 
                 <div class='footer-callout-text'>
