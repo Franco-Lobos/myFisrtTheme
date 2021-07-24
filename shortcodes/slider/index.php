@@ -61,9 +61,11 @@ function homeSlidergraficLab($categoryinput) {?>
                                         ?>
                                 
                                         <!-- post slider -->
-                                            <div style = 'background-color:red'>
-                                                <h2><?php the_title()?></h2>
-                                                <p><?php the_content()?></p>
+                                            <div style = 'background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID()) ?>)'>
+                                                <div class ='slider-text'>
+                                                    <h2><?php the_title()?></h2>
+                                                    <p><?php the_excerpt()?></p>
+                                                </div>
                                             </div>  
                                         <!--/post slider -->
                                     
@@ -106,7 +108,12 @@ function homeSlidergraficLab($categoryinput) {?>
                                     
                                             <!-- post slider -->
                                                 <div>
-                                                    <a href="<?php echo '#s'.$prev  ?>"></a><a href="<?php echo '#s'.$next ?>"></a>
+                                                    <a href="<?php echo '#s'.$prev ?>">
+                                                        ‹
+                                                    </a>
+                                                    <a href="<?php echo '#s'.$next ?>">
+                                                        ›
+                                                    </a>
                                                 </div>  
                                                 
                                             <!--/post slider -->
@@ -132,7 +139,7 @@ function homeSlidergraficLab($categoryinput) {?>
                                         ?>
                             
                                             <!-- post slider -->
-                                                <a href="<?php echo '#s'. $theid?>"><?php echo $theid ?></a>
+                                                <a href="<?php echo '#s'. $theid?>"></a>
                                             <!--/post slider -->
                                         
                                         <?php     
