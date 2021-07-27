@@ -8,40 +8,30 @@ PURE RESPONSIVE CSS3 SLIDESHOW GALLERY by Roko C. buljan
 http://stackoverflow.com/a/34696029/383904
 */
 
-:root {
-    --black: #323232;
-    --white: #fff;
-    --color1: #fec825;
-    --color2: #e02326;
-    --color3: #185426;
-    --color4: #898a89;
-    --color5: #e5e5e5;
-  }
-  
-
 .CSSgal {
 	position: relative;
 	overflow: hidden;
 	width: 100vw;
-    height: 400px;
+    height: 600px;
     padding: 0;
     color:var(--black);
 }
 
 /* SLIDER */
 
-.CSSgal .slider-text {
+.CSSgal .slider-text{
     background: linear-gradient(90deg, #323232, transparent);
     height: 100%;
-    width: 100%;
     position: absolute;
     width: 80%;
-    padding-top: 100px;
+    padding-top: 50px;
+	padding-bottom: 30px;
     padding-left:10%;
     padding-right: 10%;
     margin:0;
     text-shadow: 1px 1px 2px black;
     color:var(--white);
+    text-align: left;
 }
 
 .CSSgal .slider {
@@ -83,7 +73,9 @@ http://stackoverflow.com/a/34696029/383904
 }
 
 .CSSgal .prevNext a {
-    color:var(--color1);
+	color: var(--color2);
+	margin-left: 3%;
+	margin-right: 3%;
     font-size: 5em;
     font-weight: 600;
     -webkit-text-stroke: 1px var(--black);
@@ -173,21 +165,23 @@ http://stackoverflow.com/a/34696029/383904
 
 /* SLIDER ANIMATION POSITIONS */
 
-#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
-#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
-#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
-#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
-#s5:target ~ .slider {transform: translateX(-400%); -webkit-transform: translateX(-400%);}
-#s6:target ~ .slider {transform: translateX(-500%); -webkit-transform: translateX(-500%);}
-#s7:target ~ .slider {transform: translateX(-600%); -webkit-transform: translateX(-600%);}
-#s8:target ~ .slider {transform: translateX(-700%); -webkit-transform: translateX(-700%);}
-#s9:target ~ .slider {transform: translateX(-800%); -webkit-transform: translateX(-800%);}
-#s10:target ~ .slider {transform: translateX(-900%); -webkit-transform: translateX(-900%);}
-#s10:target ~ .slider {transform: translateX(-1000%); -webkit-transform: translateX(-1000%);}
-#s11:target ~ .slider {transform: translateX(-1100%); -webkit-transform: translateX(-1100%);}
-#s12:target ~ .slider {transform: translateX(-1200%); -webkit-transform: translateX(-1200%);}
-v
+#s1:target ~ .slider {transform: translateX(   -0%); -webkit-transform: translateX(   -0%); transition: 1.2s;}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%); transition: 1.2s;}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%); transition: 1.2s;}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%); transition: 1.5s;}
+#s5:target ~ .slider {transform: translateX(-400%); -webkit-transform: translateX(-400%); transition: 1.5s;}
+#s7:target ~ .slider {transform: translateX(-600%); -webkit-transform: translateX(-600%); transition: 1.5s;}
+#s8:target ~ .slider {transform: translateX(-700%); -webkit-transform: translateX(-700%); transition: 1.5s;}
+#s9:target ~ .slider {transform: translateX(-800%); -webkit-transform: translateX(-800%); transition: 1.5s;}
+#s10:target ~ .slider {transform: translateX(-900%); -webkit-transform: translateX(-900%); transition: 1.5s;}
+#s10:target ~ .slider {transform: translateX(-1000%); -webkit-transform: translateX(-1000%); transition: 1.5s;}
+#s11:target ~ .slider {transform: translateX(-1100%); -webkit-transform: translateX(-1100%); transition: 1.5s;}
+#s12:target ~ .slider {transform: translateX(-1200%); -webkit-transform: translateX(-1200%); transition: 1.5s;}
+
+
+
 /* More slides? Add here more rules */
+
 
 
 /* YOU'RE THE DESIGNER! 
@@ -205,9 +199,105 @@ v
 	word-spacing: 0.2em;
 	font-size: 3em;
 }
+.CSSgal .slider p {
+	font-size: 1.4em;
+}
 .CSSgal a {
 	border-radius: 50%;
 	margin: 0 3px;
 	color: rgba(0,0,0,0.8);
 	text-decoration: none;
 }
+
+
+
+
+/*Mobile Settings*/
+
+@media (min-width: 10px) and (max-width: 480px) {
+
+	.CSSgal .slider-text h2{
+		font-size: 2em;
+	}
+
+	.CSSgal .slider-text p{
+		font-size: 1.2em;
+	}
+
+	.CSSgal .slider-text{
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15%;
+	}
+	
+	.CSSgal .bullets{
+		padding: 20px;
+	}
+
+	.CSSgal .bullets > a {
+		display: inline-block;
+		width:       10px;
+		height:    	 10px;
+		line-height: 10px;
+	}
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+
+	.CSSgal .slider-text{
+		width: 90%;
+		padding-top: 20px;
+		padding-bottom: 10px;
+		padding-left: 10%;
+	}
+	.CSSgal .slider-text h2{
+		font-size: 2.2em;
+	}
+
+	.CSSgal .slider-text p{
+		font-size: 1.2em;
+	}
+	
+	.CSSgal .bullets{
+		padding: 20px;
+	}
+
+	.CSSgal .bullets > a {
+		display: inline-block;
+		width:       10px;
+		height:    	 10px;
+		line-height: 10px;
+	}
+  }
+  
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+	.CSSgal .slider-text{
+		width: 90%;
+		padding-top: 30px;
+		padding-bottom: 10px;
+		padding-left: 10%;
+	}
+
+	.CSSgal .slider-text h2{
+		font-size: 2.4em;
+	}
+
+	.CSSgal .slider-text p{
+		font-size: 1.2em;
+	}
+
+	.CSSgal .bullets{
+		padding: 20px;
+	}
+
+	.CSSgal .bullets > a {
+		display: inline-block;
+		width:       10px;
+		height:    	 10px;
+		line-height: 10px;
+	}
+  }
+  
