@@ -1,5 +1,16 @@
 <?php
 function get_child_categories($atts) {
+
+    $url:
+
+    $a = shortcode_atts( array(
+        'division' => '',
+        'categoria' => '',
+        'producto' => '',
+        'archivo' => '',
+    )
+    
+    );
     
     foreach($atts as $sub) {
         echo '<h1> '. $sub .'</h1>';
